@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1">Test paragraph</p>
+    <input type="text" id="txt1" />
+    <button>Set maxlength to 5</button>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $.noConflict();
+      jQuery(document).ready(function () {
+        // innerHTML & innerText
+        jQuery("#p1").click(function () {
+          //   jQuery(this).text("some plain text content");
+          jQuery(this).html("this is <b>bold</b> text");
+        });
+
+        jQuery("#txt1").keyup(function () {
+          // value
+          const data = jQuery(this).val(); // reading data
+          jQuery(this).val(data.toUpperCase()); // writing data
+        });
+        jQuery("button").click(function () {
+          // attribute
+          console.log(jQuery("#txt1").prop("maxlength")); // reading data
+          jQuery("#txt1").attr("maxlength", 5); // set data
+          // .attr / .prop
+        });
+      });
+    </script>
+  </body>
+</html>

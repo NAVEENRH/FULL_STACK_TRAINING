@@ -1,0 +1,142 @@
+NODE JS
+1. runtime environment
+2. dependency management
+
+node : server side apps
+npm : client side apps/managing dependency
+
+
+SERVER SIDE application development
+
+runtime env is located on client/server
+
+js : client side, server side
+
+server : should have js runtime installed
+
+NODE JS : V8 engine : google chrome engine
+
+V8 engine : installer
+
+NODE JS
+1. server side applications
+    1.1 web applications
+    1.2 api applications : commonly used
+2. CLI tools
+3. socket based applications : real time communication (chat)
+
+API : service : one app to another app
+order
+
+swiggy :
+restaurants
+    orders
+    menu
+
+payment : bank db : customer details, balance
+
+bank : service : transactionid, amount => login => success, error
+
+REST API's : PROVIDER (1), CONSUMER (many)
+REST : representational state transfer : URL : architectural concept
+graphql : graph query language
+
+abc.com/api/orders
+
+R : GET     : abc.com/api/orders        : get all the orders
+C : POST    : abc.com/api/orders        : create a new order
+U : PUT     : abc.com/api/orders/100    : update the order where order id is 100
+D : DELETE  : abc.com/api/orders/100    : delete the order where order id is 100
+C : GET     : abc.com/api/orders/100    : get the order details where order id is 100
+
+TOOLS
+1. NODE JS : runtime
+2. DB : MySql
+3. Postman : testing your api's
+4. google chrome : debugging
+
+
+NODE JS : common js module
+JS : es module : import, export
+
+NODE JS : 
+callbacks : promise : single data
+            event : multiple data
+
+dev : nodemon
+
+npm init
+npm i nodemon -D
+
+node : express
+
+api-app
+    src
+    server.js : main entry file
+    package.json
+
+    npm install express --save
+    npm install nodemon --save-dev
+
+
+    Headers, 
+    body : body parser : contains the data that we send : the data needs to be parsed
+    use form-data : to perform file uploads : multer
+    REQUEST
+    
+    Headers, body : contains the data returned from the server
+    RESPONSE
+
+
+    URL params
+    path params : abc.com/api/employee/100
+    query params : abc.com/api/employee?id=100
+
+    LOGGING
+    npm i morgan
+
+    SECURITY
+    npm i helmet
+
+    xss : cross side scripting
+
+    200 then : success
+    400 catch : error
+
+    src
+        config
+            db.config.js
+        controllers : bussiness logic
+        models
+        routes
+
+    DATABASE : install & setup the driver
+
+
+    SQL : QUERY 
+    DEVELOPMENT : SQL : ORM : Object relational mapping
+    ORM : 
+    creating a bridge between the database & the code
+
+    mongodb : mongoose : ORM
+
+    Products
+        productId
+        productName
+        productPrice
+        productImage
+        productSalePrice
+        productStock
+
+
+    index.js : require(product.model.js)
+    product.model.js : require(index.js)
+    
+
+Create api end points for
+ORDERS
+    orderId : PK
+    orderDate : default currentDate
+    shippingDate : datetime
+    orderAmount : not null
+    orderStatus : 'pending'

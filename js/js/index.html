@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1">This is default content</p>
+    <button onclick="test()">Change Text</button>
+
+    <script src="literals-destructuring.js"></script>
+    <script>
+      function test() {
+        document.getElementById("p1").innerText = "Sample updated content";
+        alert("Text changed");
+      }
+    </script>
+  </body>
+</html>

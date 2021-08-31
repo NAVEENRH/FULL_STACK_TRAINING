@@ -1,0 +1,82 @@
+TYPESCRIPT
+
+JS : loosely typed system : no data type
+
+C, C++, JAVA
+int a=0;
+string s="test"
+
+'use strict';
+var a=0;
+a="test";
+
+TYPE CHECKING : strongly typed system : TYPESCRIPT
+allows you to have compile times check & data type facility
+
+TYPESCRIPT : .ts : compile time
+after compilation TS => JS
+JAVASCRIPT : .js : run time
+
+TYPESCRIPT Compiler
+npm install -g typescript
+
+DATA TYPES
+1. string
+2. number
+3. boolean
+4. undefined
+5. {}
+6. []
+7. any
+
+
+npm v/s yarn : dependency management
+performance : yarn (caching)
+
+npm vs npx (v6.0)
+npx allows you to use a library without downloading it globally
+
+
+npm install -g create-react-app
+create-react-app my-app
+
+npx create-react-app my-app
+
+TS vs JS : TS
+
+application : webpack : installed in ur project
+
+babel : transpiler : modern day js code into conventional js
+es6 to es5
+
+let, const : var
+
+how the code should be compile can be configured thru a file known as
+tsconfig.json : tsc --init
+
+cmd : commonjs module definiton : server side
+amd : async module definiton : client side
+umd : universal module definiton : both client & server
+
+ts : js
+sourceMap :debug : ts
+it allows to keep a track/mapping between the js & ts file for debugging
+
+data-types.source.map
+
+npm : npm install library : download the library from server 
+yarn : yarn add library : download the library + cache the library in the machine
+
+Project 1
+npm install webpack : download from server : 3sec (good internet)
+yarn add webpack : download from server + cache the files in the machine
+
+Project 2
+npm install webpack : download from server (bad internet: download will fail)
+yarn add webpack : install from cache (get from cache)
+
+use ajax to get data & display the data
+use bootstrap to display data in col layout
+use jQuery to display the selected information of the user
+use css for any additional styles
+display email, dob, phone, picture

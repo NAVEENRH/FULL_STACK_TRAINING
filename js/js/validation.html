@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <input type="text" name="name" id="name" />
+      </div>
+      <input type="text" name="email" />
+      <input type="text" name="age" />
+      <input type="text" name="contact" />
+
+      <input type="text" id="sname" />
+    </form>
+
+    <script>
+      document.querySelectorAll("form .form-control");
+      let ele = document.getElementById("name");
+      let name = "name";
+      document.getElementById(name).value = document.getElementById(
+        "s" + name
+      ).value;
+      // attach on blur event dynamically
+      const inputEles = document.getElementsByTagName("input");
+      const length = inputEles.length;
+      for (var i = 0; i < length; i++) {
+        inputEles[i].addEventListener("blur", validate);
+      }
+      // element.removeEventListener('event',handler)
+      function validate() {
+        let flag = true;
+        for (var i = 0; i < length; i++) {
+          if (inputEles[i].value === "") {
+            flag = false;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

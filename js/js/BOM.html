@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="newWindow()">Open new window</button>
+    <button onclick="sameWindow()">Same window</button>
+    <button onclick="reloadPage()">Reload Page</button>
+
+    <script>
+      function reloadPage() {
+        window.location.reload();
+      }
+      function newWindow() {
+        window.open("http://google.com");
+      }
+      function sameWindow() {
+        window.location.assign("http://google.com");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <button>Show</button>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $.noConflict();
+      jQuery(document).ready(function () {
+        jQuery("button").click(function () {
+          //   jQuery("p").show(2000);
+          //   jQuery("p").toggle(2000);
+          //   jQuery("p").fadeTo(2000, 0.2);
+          jQuery("p")
+            .hide(1000)
+            .slideDown(2000)
+            .fadeOut(1000)
+            .toggle(500)
+            .fadeTo(2000, 0.2);
+        });
+
+        jQuery("p").click(function () {
+          //   jQuery(this).hide();
+          //   jQuery(this).hide(3000); // duration in ms
+          jQuery(this).hide(2000, function () {
+            console.log("hiding completed");
+          });
+          console.log("hiding is still going on");
+        });
+      });
+    </script>
+  </body>
+</html>

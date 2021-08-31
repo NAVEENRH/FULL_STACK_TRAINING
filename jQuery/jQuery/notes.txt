@@ -1,0 +1,116 @@
+JS
+jQuery : Library
+
+dom manipulation
+built-in functions
+dom traversal
+ajax
+
+1. include the Library
+2. all the code should be executed after the document is ready
+
+$(selector).event/function
+
+$(document).ready(function()) : DOM is ready
+$(window).load(function()) : resources have also downloaded
+
+
+if $ is not defined : check whether the jQuery library is loaded or not
+
+
+html
+    jQuery.js : var $ : global
+    slider.js : var $ : global
+
+
+    $ : jQuery/slider
+
+
+    hide
+    show
+    toggle
+
+    slideUp
+    slideDown
+    slideToggle
+
+    fadeOut
+    fadeIn
+    fadeToggle
+
+
+    <div>
+        <img />
+        <a href="#">Read more</a>
+        <p>text content</p>
+    </div>
+    <div>
+        <img />
+        <a href="#">Read more</a>
+        <p>text content</p>
+    </div>
+    <div>
+        <img />
+        <a href="#">Read more</a>
+        <p>text content</p>
+    </div>
+    <div>
+        <img />
+        <a href="#">Read more</a>
+        <p>text content</p>
+    </div>
+    
+siblings
+next
+prev
+
+children
+children
+find
+
+parent
+
+
+<div>
+    <a href="#">Read More</a>
+    <span></span>
+    <button></button>
+    <p></p>
+    <p></p>
+    <p class="content"></p>
+</div>
+
+this -> next -> next -> next -> toggle
+
+this -> parent -> find/children('.content')
+
+
+AJAX : async javascript & xml : PROMISE
+sending & receiving data from server
+
+method
+4 methods
+
+GET : fetch data
+POST : send data
+PUT : update data
+DELETE : delete data
+
+$.ajax : generic function : GET, POST, PUT, DELETE
+$.get : GET : response type : json, xml, html, text
+$.getJSON : GET : response type : json
+$.post : POST
+
+XHR : XML HTTP REQUEST
+
+
+$.ajax({
+    method:'PUT',
+    url:'',
+    data: data_to_update
+})
+
+$.ajax({
+    method:'DELETE',
+    url:''
+})

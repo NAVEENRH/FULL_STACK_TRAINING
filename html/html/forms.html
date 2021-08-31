@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      action="https://google.com"
+      method="get"
+      enctype="multipart/form-data"
+    >
+      <input type="number" min="10" max="100" step="5" />
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required />
+      Email :
+      <input name="email" type="email" /> Gender :
+      <input type="radio" name="gender" value="male" />Male
+      <input type="radio" name="gender" value="female" />Female
+      <button>Submit</button>
+
+      <iframe src="https://www.google.co.in/maps/@12.9311737,77.5504773,15z" />
+      <a href="#test"></a>
+
+      <audio controls autoplay loop>
+        <source src="/file.mp3" type="audio/mp3" />
+        your browser does not support audio tag
+      </audio>
+
+      <video controls autoplay loop height="" width="">
+        <source src="/file.mp4" type="video/mp4" />
+        your browser does not support video tag
+      </video>
+
+      <div id="test"></div>
+    </form>
+  </body>
+</html>

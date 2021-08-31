@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Keyup <input type="text" onkeyup="changeCase()" /><br />
+    Keydown <input type="text" onkeydown="testEvent()" /><br />
+    Keypress <input type="text" onkeypress="cardValidator()" /><br />
+
+    <script>
+      function changeCase() {
+        event.target.value = event.target.value.toUpperCase();
+      }
+      function cardValidator() {
+        if (event.keyCode < 48 || event.keyCode > 57) {
+          event.preventDefault();
+        }
+      }
+      function testEvent() {
+        console.log("event fired", event);
+      }
+    </script>
+  </body>
+</html>

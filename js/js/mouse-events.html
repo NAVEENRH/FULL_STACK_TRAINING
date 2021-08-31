@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        display: block;
+        margin: 20px;
+        padding: 10px;
+        background: aqua;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="testEvent()">Click</button>
+    <button ondblclick="testEvent()">Double Click</button>
+    <button onmousemove="testEvent()">Mouse move</button>
+    <button onmouseover="testEvent()">Mouse over</button>
+    <button onmouseout="testEvent()">Mouse out</button>
+    <button onmouseup="testEvent()">Mouse up</button>
+    <button onmousedown="testEvent()">Mouse down</button>
+
+    <script>
+      function testEvent() {
+        console.log("event fired", event);
+      }
+    </script>
+  </body>
+</html>

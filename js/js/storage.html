@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <textarea>
+        innerText/innerHTML
+      </textarea>
+      <input type="text" id="key" placeholder="key" value="test" />
+      <input type="text" id="value" placeholder="value" />
+      <button type="button" onclick="storeLocal()">Local Storage</button>
+      <button type="button" onclick="getData()">Get Storage</button>
+      <button type="button" onclick="storeSession()">Session Storage</button>
+      <button type="button" onclick="clearLocal()">Clear local Storage</button>
+      <button type="button" onclick="clearSession()">
+        Clear session Storage
+      </button>
+    </form>
+    <script>
+      const key = document.getElementById("key");
+      const val = document.getElementById("value");
+      function storeLocal() {
+        localStorage.setItem(
+          key.value,
+          JSON.stringify({ name: "test", age: 21 })
+        );
+      }
+      function getData() {
+        const data = localStorage.getItem(key.value);
+        console.log(JSON.parse(data));
+      }
+      function storeSession() {
+        sessionStorage.setItem(key.value, JSON.stringify(val.value));
+      }
+      function clearLocal() {
+        localStorage.clear(); // remove all
+        //   localStorage.removeItem('key') ; // selected key to be removed
+      }
+    </script>
+  </body>
+</html>
